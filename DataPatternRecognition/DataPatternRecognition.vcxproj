@@ -30,6 +30,8 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -111,13 +113,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DataPatternRecognition.h" />
-    <ClInclude Include="DataPatternRecognizer.h" />
-    <ClInclude Include="DataPatternRecognizerResult.h" />
-    <ClInclude Include="DataPatternRecognizerWorker.h" />
-    <ClInclude Include="LogicPattern.h" />
+    <ClInclude Include="DataPatternRecognition.hpp" />
+    <ClInclude Include="DataPatternRecognizer.hpp" />
+    <ClInclude Include="DataPatternRecognizerResult.hpp" />
+    <ClInclude Include="DataPatternRecognizerWorker.hpp" />
+    <ClInclude Include="LogicPattern.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataPatternRecognizer.cpp" />
+    <ClCompile Include="DataPatternRecognizerResult.cpp" />
+    <ClCompile Include="DataPatternRecognizerWorker.cpp" />
+    <ClCompile Include="LogicPattern.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
